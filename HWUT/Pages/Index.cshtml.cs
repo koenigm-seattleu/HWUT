@@ -43,6 +43,7 @@ namespace HWUT.Pages
         {
             // Get the products
             Products = ProductService.GetProducts();
+
         }
     }
 }
