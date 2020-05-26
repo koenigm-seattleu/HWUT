@@ -21,7 +21,7 @@
                 <a class="card-title" asp-area="" asp-page="/Listings">@product.Title</a>
             </div>
             <div class="card-footer">
-                <h4>@product.AverageRating()</h4>
+                <h4>@product.AverageRating() on @product.Date.ToShortDateString()</h4>
             </div>
         </div>
     }
