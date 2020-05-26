@@ -20,6 +20,9 @@
             <div class="card-body">
                 <a class="card-title" asp-area="" asp-page="/Listings">@product.Title</a>
             </div>
+            <div class="card-footer">
+                <h4>@product.AverageRating()</h4>
+            </div>
         </div>
     }
 </div>
