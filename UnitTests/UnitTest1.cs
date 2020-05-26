@@ -6,9 +6,13 @@ namespace UnitTests
     public class UnitTest1
     {
         [TestMethod]
-        public void TestMethod1()
+        public void Method_Condition_Configuration_Should_Result()
         {
+            // Arrange
 
+            // Act
+
+            // Assert
         }
     }
 }
