@@ -44,5 +44,20 @@ namespace HWUT.Models
 
         // Return the json version of the data
         public override string ToString() => JsonSerializer.Serialize<ProductModel>(this);
+
+        /// <summary>
+        /// Create a new default Product
+        /// 
+        /// Set Logistics to Empty
+        /// Email to Unknown
+        /// Initialize a rating to be 5 
+        /// </summary>
+        public ProductModel()
+        {
+            Logistics = "Empty";
+            Email = "Unknown";
+            Ratings = new int[1];
+            Ratings[0] = 5;
+        }
     }
 }
