@@ -1,5 +1,6 @@
 ﻿using System.Text.Json.Serialization;
 using System.Text.Json;
+using System;
 
 namespace HWUT.Models
 {
@@ -56,8 +57,38 @@ namespace HWUT.Models
         {
             Logistics = "Empty";
             Email = "Unknown";
-            Ratings = new int[1];
-            Ratings[0] = 5;
+
+            // Create an element in the array 
+            Ratings = new int[] { 5 };
+        }
+
+        public int AverageRating()
+        {
+            if (Ratings == null)
+            {
+                return 0;
+            }
+
+            var total = 0;
+            var count = 0;
+
+            foreach (var item in Ratings)
+            {
+                total += item;
+                count ++;
+            }
+
+            if (count == 0)
+            {
+                return 0;
+            }
+
+            if (total == 0)
+            {
+                return 0;
+            }
+
+            return total / count;
         }
     }
 }
