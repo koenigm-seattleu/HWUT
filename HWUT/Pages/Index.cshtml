@@ -1,0 +1,25 @@
+﻿@page
+@using HWUT.Pages
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Class Example Project</h1>
+
+    <h2 class="display-4"> Mike Koenig </h2>
+</div>
+
+<div class="card-columns">
+    @foreach (var product in Model.Products)
+    {
+        <div class="card">
+            <div class="card-img" style="background-image: url('@product.Image');">
+            </div>
+            <div class="card-body">
+                <a class="card-title" asp-area="" asp-page="/Listings">@product.Title</a>
+            </div>
+        </div>
+    }
+</div>
