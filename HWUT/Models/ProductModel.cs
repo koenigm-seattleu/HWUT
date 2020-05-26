@@ -29,7 +29,7 @@ namespace HWUT.Models
         public string Description { get; set; }
 
         // Date String
-        public string Date { get; set; }
+        public DateTime Date { get; set; }
 
         // The Next Stop in this tour
         public string Sequence { get; set; }
@@ -49,13 +49,17 @@ namespace HWUT.Models
         /// <summary>
         /// Create a new default Product
         /// 
+        /// Set Date to be today
         /// Set Logistics to Empty
         /// Email to Unknown
         /// Initialize a rating to be 5 
         /// </summary>
         public ProductModel()
         {
-            Logistics = "Empty";
+            Date = DateTime.UtcNow;
+
+            Logistics = "";
+
             Email = "Unknown";
 
             // Create an element in the array 
