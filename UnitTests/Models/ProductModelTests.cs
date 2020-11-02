@@ -1,6 +1,8 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using HWUT.Models;
 using System;
+
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+
+using HWUT.Models;
 
 namespace UnitTests
 {
@@ -8,7 +10,7 @@ namespace UnitTests
     public class ProductModelTests
     {
         [TestMethod]
-        public void ProductModel_Constructor_Default_Should_Pass()
+        public void ProductModel_Valid_Constructor_Default_Should_Pass()
         {
             // Arrange
 
@@ -20,7 +22,7 @@ namespace UnitTests
         }
 
         [TestMethod]
-        public void ProductModel_Get_Date_Default_Should_Pass()
+        public void ProductModel_Valid_Get_Date_Default_Should_Return_Date()
         {
             // Arrange
 
